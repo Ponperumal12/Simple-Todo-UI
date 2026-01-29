@@ -11,7 +11,6 @@ class Post {
     required this.body,
   });
 
-  // Convert JSON → Dart object
   factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
       userId: json['userId'],
@@ -21,7 +20,6 @@ class Post {
     );
   }
 
-  // Convert Dart object → JSON (useful for sending data back to API)
   Map<String, dynamic> toJson() {
     return {
       'userId': userId,
